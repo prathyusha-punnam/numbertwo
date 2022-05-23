@@ -17,6 +17,14 @@ app.get("/user",(req,res,next)=>{
     console.log(req.query);
     res.send("hey user");
 })
+app.get("/this",(req,res,next)=>{
+    console.log(req.query);
+    const{student,age,gender}=req.query;
+    res.send(`hey ${student} you are ${age}years old and gender is ${gender}`);
+})
+
+
+
 
 app.get("/admin/:data",(req,res,next)=>{
     const paramdata=req.params.data;
